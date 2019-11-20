@@ -1,7 +1,7 @@
----
 apiVersion: 1.0.0
 metadata:
-  generateName: ibm-zopeneditor-
+  name: IBM Z Developer Experience Stack
+components:
 projects:
   -
     name: ibm-zopeneditor-simple
@@ -21,7 +21,7 @@ components:
     alias: zowe
   -
     type: dockerimage
-    alias: gradle
+    alias: ibm-z
     image: quay.io/eclipse/che-java11-gradle:nightly
     memoryLimit: 512Mi
     mountSources: true
