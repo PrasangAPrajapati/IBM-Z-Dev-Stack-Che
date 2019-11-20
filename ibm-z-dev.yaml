@@ -13,12 +13,12 @@ attributes:
 components:
   -
     type: chePlugin
-    reference: ibm/zopeneditor/latest
-    alias:
+    reference: https://raw.githubusercontent.com/PrasangAPrajapati/IBM-Z-Dev-Stack-Che/master/zopeneditor.yaml
+    alias: ibm-z-open-editor
   -
     type: chePlugin
-    reference: ibm/zowe/latest
-    alias:
+    reference: https://raw.githubusercontent.com/PrasangAPrajapati/IBM-Z-Dev-Stack-Che/master/zowe.yaml
+    alias: zowe
   -
     type: dockerimage
     alias: gradle
