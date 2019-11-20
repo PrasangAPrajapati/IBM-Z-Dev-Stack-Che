@@ -1,0 +1,20 @@
+apiVersion: v2
+publisher: ibm
+name: zowe
+version: latest
+type: VS Code extension
+displayName: Explore IBM z/OS mainframes
+title: Explore IBM z/OS mainframes such as MVS, JES, USS
+description: You can explore data sets, view their contents, make changes, and upload the changes to the mainframe
+  and more...
+icon: https://www.eclipse.org/che/images/logo-eclipseche.svg
+repository: https://github.com/zowe/vscode-extension-for-zowe.git
+category: Other
+firstPublicationDate: "2019-10-03"
+spec:
+  containers:
+  - image: "docker.io/eclipse/che-theia-endpoint-runtime:7.3.0"
+    name: vscode-node-zowe
+    memoryLimit: '512Mi'
+  extensions:
+  - https://marketplace.visualstudio.com/_apis/public/gallery/publishers/Zowe/vsextensions/vscode-extension-for-zowe/0.26.0/vspackage
