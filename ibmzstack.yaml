@@ -1,0 +1,62 @@
+apiVersion: 1.0.0
+metadata:
+  name: IBM-Z-Developer-Experience
+components:
+projects:
+  -
+    name: ibm-zopeneditor-sample
+    source:
+      type: git
+      location: "https://github.com/IBM/zopeneditor-sample.git"
+attributes:
+  persistVolumes: 'false'
+components:
+  -
+    type: chePlugin
+    reference: https://raw.githubusercontent.com/PrasangAPrajapati/IBM-Z-Dev-Stack-Che/master/zopeneditor.yaml
+    alias: ibm-z-open-editor
+  -
+    type: chePlugin
+    reference: https://raw.githubusercontent.com/PrasangAPrajapati/IBM-Z-Dev-Stack-Che/master/zowe.yaml
+    alias: zowe
+  - 
+    alias: ibm-z
+    type: kubernetes
+    mountSources: true
+    referenceContent: |
+         kind: List
+         items:
+          - 
+           apiVersion: v1
+           kind: Pod
+           metadata:
+            name: ibmz
+           spec:
+            volumes:
+             - name: ibmz
+               persistentVolumeClaim:
+                 claimName: ibmz-claim
+            containers:
+             - 
+              image: 'quay.io/eclipse/che-java11-gradle:nightly'
+              env: 
+              - name: THEIA_PLUGINS
+                value: local-dir:///plugins
+              name: ibm-z
+              resources:
+               limits:
+                memory: 1024Mi
+              volumeMounts:
+               - mountPath: /projects
+                 name: projects
+          -
+           apiVersion: v1
+           kind: PersistentVolumeClaim
+           metadata:
+            name: ibmz-claim
+           spec:
+            accessModes:
+             - ReadWriteOnce
+            resources:
+              requests:
+                storage: 128Mi
