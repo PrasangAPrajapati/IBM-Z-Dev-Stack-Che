@@ -54,7 +54,7 @@ components:
                - mountPath: /projects
                  name: projects
                - mountPath: /home/user/.zowe
-                 name: zowe
+                 name: ibm-z
           -
            apiVersion: v1
            kind: PersistentVolumeClaim
