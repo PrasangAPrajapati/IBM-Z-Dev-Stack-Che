@@ -35,5 +35,5 @@ spec:
     - mountPath: "/home/wazi"
       name: wazi
   extensions:
-  - http://rtpgsa.ibm.com/projects/w/wazi/current/latest/zopendebug.vsix
-  - http://rtpgsa.ibm.com/projects/w/wazi/current/latest/zopendebug-profileui.vsix
+  - http://tlbgsa.ibm.com/projects/d/debug_ui_builds/RTC/PDT_DAAS_WEB_UI/vNext/I/20200917-2230/zopendebug.vsix
+  - http://tlbgsa.ibm.com/projects/d/debug_ui_builds/RTC/PDT_DAAS_WEB_UI/vNext/I/20200917-2230/zopendebug-profileui.vsix
