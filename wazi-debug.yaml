@@ -25,15 +25,15 @@ firstPublicationDate: "2020-07-29"
 spec:
   containers:
   - image: docker.io/ibmcom/wazi-code-codeready:latest
-    name: ibm-wazi
+    name: ibm-wazi-debug
     memoryLimit: "3000Mi"
     args:
       - sh
       - -c
       - ${PLUGIN_REMOTE_ENDPOINT_EXECUTABLE}
     volumes:
-    - mountPath: "/home/wazi"
-      name: wazi
+    - mountPath: "/home/wazi/home/theia"
+      name: wazi-debug
   extensions:
-  - http://tlbgsa.ibm.com/projects/d/debug_ui_builds/RTC/PDT_DAAS_WEB_UI/vNext/I/20200917-2230/zopendebug.vsix
-  - http://tlbgsa.ibm.com/projects/d/debug_ui_builds/RTC/PDT_DAAS_WEB_UI/vNext/I/20200917-2230/zopendebug-profileui.vsix
+  - http://rtpgsa.ibm.com/projects/w/wazi/current/latest/zopendebug.vsix
+  - http://rtpgsa.ibm.com/projects/w/wazi/current/latest/zopendebug-profileui.vsix
