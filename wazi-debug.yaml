@@ -36,4 +36,4 @@ spec:
       name: wazi-debug
   extensions:
   - http://tlbgsa.ibm.com/projects/d/debug_ui_builds/RTC/PDT_DAAS_WEB_UI/vNext/I/20200917-2230/zopendebug.vsix
-  - http://tlbgsa.ibm.com/projects/d/debug_ui_builds/RTC/PDT_DAAS_WEB_UI/vNext/I/20200917-2230/zopendebug-profileui.vsix
+  - https://github.com/nsharma1989/my-plugin-registry/blob/master/ibm/zopendebug-profileui/1.0.1/zopendebug-profileui-1.1.0.vsix
