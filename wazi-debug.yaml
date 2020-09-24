@@ -32,10 +32,8 @@ spec:
       - -c
       - ${PLUGIN_REMOTE_ENDPOINT_EXECUTABLE}
     volumes:
-    - mountPath: "/home/wazi/.zowe"
+    - mountPath: "/home/wazi"
       name: wazi
-    - mountPath: "/home/wazi/.m2"
-      name: m2
   extensions:
   - http://rtpgsa.ibm.com/projects/w/wazi/current/latest/zopendebug.vsix
   - http://rtpgsa.ibm.com/projects/w/wazi/current/latest/zopendebug-profileui.vsix
